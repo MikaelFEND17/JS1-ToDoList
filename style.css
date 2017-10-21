@@ -1,0 +1,88 @@
+body
+{
+    background-color: #FFFFFF;
+}
+
+h1
+{
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#Content
+{
+    margin: auto;
+    width: 1000px;
+}
+
+#ToDoList
+{
+    width: 400px;
+    height: 800px;
+    background-color: #F8F66A;
+    padding-left: 40px;
+    padding-top: 20px;
+    float: left;
+}
+
+#ToDoListDone
+{
+    width: 400px;
+    height: 800px;
+    background-color: #F8F66A;
+    padding-left: 40px;
+    padding-top: 20px;
+    float: right;
+}
+
+#ListSeparator
+{
+    width: 100px;
+    height: 800px;
+}
+
+.ListItemContainer
+{    
+    width: 400px;
+    height: 30px;
+}
+
+.ListItemToDo
+{    
+    width: 350px;
+    height: 30px;
+}
+
+.ListItemDone
+{   
+    width: 400px;
+    height: 30px;
+}
+
+.ListItemToDoText
+{
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ListItemDoneText
+{
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.ButtonDelete
+{
+    background: url(xmark.png) no-repeat;
+    border: 0px;
+    width: 32px;
+    height: 32px;
+}
+
+.ButtonMarkAsDone
+{
+    background: url(checkmark.png) no-repeat;
+    border: 0px;
+    width: 32px;
+    height: 32px;
+}
