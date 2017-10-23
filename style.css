@@ -20,17 +20,17 @@ h1
     width: 400px;
     height: 800px;
     background-color: #F8F66A;
-    padding-left: 40px;
+    padding-left: 25px;
     padding-top: 20px;
     float: left;
 }
 
 #ToDoListDone
 {
-    width: 400px;
+    width: 450px;
     height: 800px;
     background-color: #F8F66A;
-    padding-left: 40px;
+    padding-left: 25px;
     padding-top: 20px;
     float: right;
 }
@@ -43,7 +43,7 @@ h1
 
 .ListItemContainer
 {    
-    width: 400px;
+    width: 450px;
     height: 30px;
 }
 
@@ -77,6 +77,13 @@ h1
     border: 0px;
     width: 32px;
     height: 32px;
+    float: right;
+}
+
+.ButtonDelete:focus
+{
+    border: 0px;
+    outline: 0;
 }
 
 .ButtonMarkAsDone
@@ -85,4 +92,12 @@ h1
     border: 0px;
     width: 32px;
     height: 32px;
+    float: right;
 }
+
+.ButtonMarkAsDone:focus
+{
+    border: 0px;
+    outline: 0;
+}
+

@@ -1,0 +1,6 @@
+Allt...
+
+
+Plus Knapp.
+Div för att lägga till.
+Skriv ut från array
