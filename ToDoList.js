@@ -1,12 +1,21 @@
+var toDoList = new ToDoList();
+var addTextButton = document.getElementById("AddText");
+addTextButton.addEventListener("click", function() { toDoList.AddToToDo() });
+
 function ToDoList()
 {
-    this.ToDo = new Array();
-    this.DoneToDo = new Array();
+    this.toDo = new Array();
+    this.doneToDo = new Array();
 
-    this.AddItem = function(Item)
+
+    this.AddToToDo = function()
     {
-        this.ToDo.push(item);
-        this.ReloadList();
+        var toDoText = document.getElementById("ToDoInput").value;
+    
+        this.toDo.push(toDoText);
+        console.log("Added: " + toDoText);
+
+        this.ReloadToDoList();
     }
 
     this.ReloadToDoList = function()
@@ -27,26 +36,30 @@ function ToDoList()
         }
     }
 
-    this.DeleteItemAtIndex(index)
+    this.DeleteItemAtIndex = function(index)
     {
         this.ToDo.splice(index, 1);
     }
 
-    this.MoveToDoneListAtIndex(index)
+    this.MoveToDoneListAtIndex = function(index)
     {
         this.DoneToDo.push(this.ToDo[index]);        
         this.ToDo.splice(index, 1);
     }
-
-    //Debug funktioner
-    this.DebugMakeList()
-    {
-        this.ToDo.push("Detta är något som ska göras #1");
-        this.ToDo.push("Detta är något som ska göras #2");
-        this.ToDo.push("Detta är något som ska göras #3");
-        this.ToDo.push("Detta är något som ska göras #4");
-
-        this.DoneToDo.push("Detta är något som har gjorts #1");
-        this.DoneToDo.push("Detta är något som har gjorts #1");
-    }
 }
+
+
+//Debug funktioner
+function DebugMakeList() 
+{
+    toDoList.toDo.push("Detta är något som ska göras #1");
+    toDoList.toDo.push("Detta är något som ska göras #2");
+    toDoList.toDo.push("Detta är något som ska göras #3");
+    toDoList.toDo.push("Detta är något som ska göras #4");
+
+    toDoList.doneToDo.push("Detta är något som har gjorts #1");
+    toDoList.doneToDo.push("Detta är något som har gjorts #1");
+
+    console.log(toDoList);
+}
+
