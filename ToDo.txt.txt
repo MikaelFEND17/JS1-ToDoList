@@ -1,6 +1,6 @@
 Allt...
 
-
+Border
 Plus Knapp.
-Div för att lägga till.
-Skriv ut från array
+Div fï¿½r att lï¿½gga till.
+Skriv ut frï¿½n array
