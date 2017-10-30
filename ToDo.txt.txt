@@ -1,6 +1,5 @@
-Allt...
+ToDo:
 
-Border
-Plus Knapp.
-Div f�r att l�gga till.
-Skriv ut fr�n array
+1. Snyggare input
+2. Rensa hela done list
+3. LocalStorage

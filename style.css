@@ -10,10 +10,39 @@ h1
     text-align: center;
 }
 
+/*
+ul 
+{
+}
+*/
+
+li 
+{
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+    height: 35px;
+}
+
+input 
+{
+    background-color: #F8F66A;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+input[type="text"] 
+{
+    border: 0;
+    width: 80%;
+    margin-left: 25px;
+}
+
 #Content
 {
-    margin: auto;
-    width: 1000px;
+    display: flex; 
+    justify-content: space-around
 }
 
 #ToDoList
@@ -25,6 +54,18 @@ h1
     padding-top: 20px;
     float: left;
     border: 1px solid #000000;
+    
+    display: flex; 
+    align-self: flex-start;
+    flex-direction: column;
+}
+
+#ToDoListItems
+{
+    width: 450px;
+    height: 800px;
+    align-self: flex-start;
+    flex-direction: column;
 }
 
 #ToDoListDone
@@ -35,72 +76,34 @@ h1
     padding-left: 25px;
     padding-top: 20px;
     float: right;
-    border: 1px solid #000000;
+    border: 1px solid #000000;justify-content: flex-start;
 }
 
-#ListSeparator
+#AddTextInput
 {
-    width: 100px;
-    height: 800px;
-}
-
-.ListItemContainer
-{    
-    width: 450px;
-    height: 30px;
-}
-
-.ListItemToDo
-{    
-    width: 350px;
-    height: 30px;
-}
-
-.ListItemDone
-{   
-    width: 400px;
-    height: 30px;
-}
-
-.ListItemToDoText
-{
-    color: #000000;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.ListItemDoneText
-{
-    color: #000000;
-    font-family: Arial, Helvetica, sans-serif;
+    display: flex; 
+    align-self: flex-around;
 }
 
 .ButtonDelete
 {
     background: url(xmark.png) no-repeat;
-    border: 0px;
+    border: 0;
     width: 32px;
     height: 32px;
+    right: 0;
     float: right;
+    padding-right: 25px;
 }
 
-.ButtonDelete:focus
-{
-    border: 0px;
-    outline: 0;
-}
 
-.ButtonMarkAsDone
+.ButtonDone
 {
     background: url(checkmark.png) no-repeat;
-    border: 0px;
+    border: 0;
     width: 32px;
     height: 32px;
     float: right;
 }
 
-.ButtonMarkAsDone:focus
-{
-    border: 0px;
-    outline: 0;
-}
 

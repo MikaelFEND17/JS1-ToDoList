@@ -1,65 +1,70 @@
-var toDoList = new ToDoList();
+var myToDoList = new ToDoList();
 var addTextButton = document.getElementById("AddText");
-addTextButton.addEventListener("click", function() { toDoList.AddToToDo() });
+addTextButton.addEventListener("click", function() { myToDoList.AddToToDo() });
 
-function ToDoList()
+
+function ToDoList() 
 {
-    this.toDo = new Array();
-    this.doneToDo = new Array();
+    this.myToDo = new Array();
+    this.myDoneToDo = new Array();
 
+    this.myToDoList = document.getElementById("ListThingsToDo");
+    this.myDoneList = document.getElementById("ListThingsDone");
 
-    this.AddToToDo = function()
+    this.AddToToDo = function () 
     {
         var toDoText = document.getElementById("ToDoInput").value;
-    
-        this.toDo.push(toDoText);
-        console.log("Added: " + toDoText);
 
-        this.ReloadToDoList();
-    }
-
-    this.ReloadToDoList = function()
-    {
-        //Skriv ut ToDo-listan    
-        for (item in this.ToDo)
+        if (toDoText.length > 0) 
         {
-            //Print Item
+
+            var listElement = document.createElement("li");
+
+            var textNode = document.createTextNode(toDoText);
+            listElement.appendChild(textNode);
+
+            var deleteButton = document.createElement("div");
+            deleteButton.className = "ButtonDelete";
+            deleteButton.addEventListener("click", function () { myToDoList.DeleteElementFromToDo(this.parentElement); }); 
+            listElement.appendChild(deleteButton);
+
+            var doneButton = document.createElement("div");
+            doneButton.className = "ButtonDone";
+            doneButton.addEventListener("click", function () { myToDoList.MoveToDoneList(this.parentElement); });
+            listElement.appendChild(doneButton);
+
+
+
+            this.myToDo.push(listElement);
+            this.myToDoList.appendChild(listElement);
+        }
+        else 
+        {
+            alert("Can't add empty To Do's");
         }
     }
 
-    this.ReloadDoneList = function()
+    this.DeleteElementFromToDo = function (item) 
     {
-        //Skriv ut Done-listan
-        for (item in this.DoneToDo)
+        this.myToDoList.removeChild(item);
+    }
+
+    this.MoveToDoneList = function (item) 
+    {   
+        //Remove all buttons
+        var i = item.childNodes.length;
+
+        while (i--) 
         {
-            //Print Item
+            if (item.childNodes[i].nodeType == 1)
+            {
+                item.removeChild(item.childNodes[i]);
+            }
         }
-    }
+        this.myDoneList.appendChild(item);
+        this.myDoneToDo.push(item);
 
-    this.DeleteItemAtIndex = function(index)
-    {
-        this.ToDo.splice(index, 1);
-    }
-
-    this.MoveToDoneListAtIndex = function(index)
-    {
-        this.DoneToDo.push(this.ToDo[index]);        
-        this.ToDo.splice(index, 1);
     }
 }
 
-
-//Debug funktioner
-function DebugMakeList() 
-{
-    toDoList.toDo.push("Detta är något som ska göras #1");
-    toDoList.toDo.push("Detta är något som ska göras #2");
-    toDoList.toDo.push("Detta är något som ska göras #3");
-    toDoList.toDo.push("Detta är något som ska göras #4");
-
-    toDoList.doneToDo.push("Detta är något som har gjorts #1");
-    toDoList.doneToDo.push("Detta är något som har gjorts #1");
-
-    console.log(toDoList);
-}
 

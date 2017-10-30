@@ -12,26 +12,26 @@
 
 </head>
 
-<body onload="DebugMakeList()">
-
+<body onload="">
+    
     <div id="Content">
         <div id="ToDoList">
-            <h1>TO DO</h1>
-            <ul id=ListThingsToDo>
-            </ul>
-
+            <div id="ToDoListItems">
+                <h1>TO DO</h1>
+                 <ul id="ListThingsToDo">
+                </ul>
+            </div>
+            <div id="AddTextInput">
+                <input type="text" id="ToDoInput" value="Random Text" />
+                <input type="button" id="AddText" value="Lägg till" />
+            </div>
         </div>
-        <!--<div id="ListSeparator">
-
-        </div>-->
         <div id="ToDoListDone">
             <h1>DONE</h1>
-            <ul id=ListThingsDone>
+            <ul id="ListThingsDone">
             </ul>
         </div>
 
-        <input type="text" id="ToDoInput" value="Random Text"/>
-        <input type="button" id="AddText" value="Lägg till"/>
     </div>
 
 </body>
