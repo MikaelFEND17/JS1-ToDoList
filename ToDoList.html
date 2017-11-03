@@ -12,14 +12,17 @@
 
 </head>
 
-<body onload="">
+<body onload="myToDoList.LoadFromLocalStorage()">
     
     <div id="Content">
         <div id="ToDoList">
             <div id="ToDoListItems">
                 <h1>TO DO</h1>
-                 <ul id="ListThingsToDo">
+                <ul id="ListThingsToDo">
                 </ul>
+            </div>
+            <div id="AddTextPlus">
+                <div id="ButtonPlus"></div>
             </div>
             <div id="AddTextInput">
                 <input type="text" id="ToDoInput" value="Random Text" />
@@ -33,6 +36,11 @@
         </div>
 
     </div>
+
+    <br />
+    <button id="DebugClear" onclick="myToDoList.ClearLSDoneList();">
+            Clear Local Storage Done List
+    </button>
 
 </body>
 
