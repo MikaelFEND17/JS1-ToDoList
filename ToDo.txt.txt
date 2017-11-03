@@ -2,3 +2,4 @@ ToDo:
 
 1. Snyggare Button och Input
 2. Error text vid fel input och " " check
+3. Move up down
