@@ -1,9 +1,0 @@
-ToDo:
-
-1. Snyggare input
-2. Rensa hela done list
-3. LocalStorage
-4. fadein på Done list
-4. MoveToDone = fadeout
-4. Deleteitem = flytta bort
-5. move position?
