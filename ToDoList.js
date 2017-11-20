@@ -10,13 +10,17 @@ addTextPlusButton.addEventListener("click", function() { myToDoList.AddTextVisib
 var addTextInput = document.getElementById("AddTextInput");
 var addTextPlus = document.getElementById("AddTextPlus");
 
-function ToDoList() 
+
+var elementListToDo = document.getElementById("ListThingsToDo");
+var elementListDone = document.getElementById("ListThingsDone");
+
+function ToDoList(elementListToDo, elementListDone) 
 {
     this.myToDo = new Array();
     this.myDoneToDo = new Array();
 
-    this.myToDoList = document.getElementById("ListThingsToDo");
-    this.myDoneList = document.getElementById("ListThingsDone");
+    this.myToDoList = elementListToDo;
+    this.myDoneList = elementListDone;
 
     this.myToDoCounter = 0;
     this.myDoneCounter = 0;
